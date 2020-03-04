@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "a84fcde7-ece0-4ff8-aef5-bc81de1951ec",
+		"name": "ZupChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar Cliente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cpf\": \"99999999999\",\n  \"dataNascimento\": \"9999-99-99\",\n  \"endereco\": {\n    \"cep\": \"\",\n    \"cidade\": \"\",\n    \"logradouro\": \"\",\n    \"nome\": \"\",\n    \"rua\": \"\"\n  },\n  \"nome\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				},
+				"description": "API para criar um novo cliente\n* Não é possível cadastrar o mesmo cliente duas vezes\n* Cada cliente é unicamente separado pelo campo CPF"
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhes Cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"{id}"
+					]
+				},
+				"description": "API para listar os detalhes de um cliente\n* Informe o id do cliente no parametro {id}"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cpf\": \"99999999999\",\n  \"dataNascimento\": \"9999-99-99\",\n  \"endereco\": {\n    \"cep\": \"string\",\n    \"cidade\": \"string\",\n    \"logradouro\": \"string\",\n    \"nome\": \"string\",\n    \"rua\": \"string\"\n  },\n  \"nome\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"{id}"
+					]
+				},
+				"description": "API para atualizar os detalhes de um cliente\n* Informe o id do cliente no parametro {id}"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"{id}"
+					]
+				},
+				"description": "API para remover um cliente\n* Informe o id do cliente no parametro {id}"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
