@@ -1,4 +1,4 @@
-# Técnologias
+# Tecnologias
  - Spring
  - Spring Data
  - REST
@@ -22,8 +22,8 @@ docker run --name zup-postgres-db -p 5432:5432 -e POSTGRES_DB=postgres-zup-chall
 
 3. Iniciar a aplicação
 ```sh
-```
 	mvn spring-boot:run
+```
 
 ## Outras considerações
 
