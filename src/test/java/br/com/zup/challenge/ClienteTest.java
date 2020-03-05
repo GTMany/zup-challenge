@@ -21,9 +21,9 @@ import br.com.zup.challenge.service.ClienteService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = ZupChallengeApplication.class)
-public class UsuarioTest {
+public class ClienteTest {
 	
-	private Logger logger = LoggerFactory.getLogger(UsuarioTest.class);
+	private Logger logger = LoggerFactory.getLogger(ClienteTest.class);
 	
 	@Autowired
 	private ClienteService clienteService;
